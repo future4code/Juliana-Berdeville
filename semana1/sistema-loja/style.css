@@ -1,0 +1,124 @@
+*
+{
+    margin:0px;
+    padding:0px;
+}
+body
+{
+    background: #29292b;
+}
+
+#nav ul #nook
+{
+    float:left;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+#nav ul #nook a 
+{
+    color: #469978;
+    text-decoration: none;
+    margin-left: -15px;
+}
+
+#nav ul
+{
+    list-style: none;
+    background-color: #040405;
+    margin:0px;
+    text-align: right;
+    padding: 10px;
+    top:0px;
+    left:0px;
+    right:0px;
+}
+
+#nav ul li
+{
+    display: inline;
+}
+
+#nav ul li a
+{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    color: #555557;
+}
+
+#nav ul li a:hover
+{
+   
+    color: #449175;
+    transition-delay: 150ms;
+    transition-duration: 500ms;
+}
+
+#msg #msg-home
+{
+    font: 25px Arial, Helvetica, sans-serif;
+    color: #688f7e;
+    margin-top: 30px;
+    margin-left: 3px;
+}
+
+#leftblock #primeiro-p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #BABABA;
+    display: block;
+    margin-top: 60px;
+    margin-left: 3px;
+    width: 170px;
+}
+
+#leftblock #segundo-p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #BABABA;
+    display: block;
+    margin-top: 60px;
+    margin-left: 3px;
+    width: 170px;
+}
+
+
+#footer
+{
+    position: fixed;
+    width: 100%;
+    background: #040405;
+    bottom: 0px;
+    left: 0px;
+    height: 200px;
+}
+#footer .bloco-footer
+{
+    width: 170px;
+    height: 100%;
+}
+#footer .bloco-footer p
+{
+    display:inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #BABABA;
+    width: 170px;
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+#footer .bloco-footer h6
+{
+    color: #555557;
+    font: bold 15px Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#form-vendas
+{
+    margin-top: 10px;
+    margin-left: 5px;
+}
