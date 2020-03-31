@@ -100,6 +100,43 @@
 // cookie = prompt("Qual é o seu cookie favorito?")
 // console.log("Qual é o seu cookie favorito?")
 // console.log("Resposta: " + cookie)
+/************************************************************************************************************************/
+/*Exercício de escrita de código - 3*/
+// var desconto = prompt("Há algum desconto a ser aplicado em sua conta de energia? Informe o valor inteiro. (exemplo: 15% de desconto = 15)")
+// var desconto = desconto/100
+// var quilowatt = prompt("Olá! Para iniciar os cálculos, pedimos que informe o número de quilowatts em sua conta de energia:")
+// var resultado = 0.05 * quilowatt
+// var calculoDesconto = (0.05 * quilowatt) * desconto
+// var resultadoComDesconto = resultado - calculoDesconto
+// console.log("Prontinho! Com base nos " + quilowatt + " quilowatts informados, o valor a ser pago é: " + resultado)
+// console.log("Caso tenha informado algum desconto a ser aplicado em sua conta de energia, o valor com este desconto é: " + resultadoComDesconto)
+/************************************************************************************************************************/
+/*Exercício de escrita de código - Desafio*/
+
+// var libras = prompt("Informe o valor em libras: ")
+// var quilos = libras * 0.4
+// console.log("a. Prontinho! " + libras + " libras equivalem a: " + quilos + " quilos.")
+
+// var oncas = prompt("Informe o valor em onças: ")
+// var quilos = oncas * 0.03
+// console.log("b. Prontinho! " + oncas + " onças equivalem a: " + quilos + " quilos.")
+
+// var milhas = prompt("Informe o valor em milhas: ")
+// var metros = milhas * 1609.2
+// console.log("c. Prontinho! " + milhas + " milhas equivalem a: " + metros + " metros.")
+
+// var pés = prompt("Informe o valor em pés: ")
+// var metros = pés * 1609.2
+// console.log("d. Prontinho! " + pés + " pés equivalem a: " + metros + " metros.")
+
+// var galões = prompt("Informe o valor em galões: ")
+// var litros = galões * 1609.2
+// console.log("e. Prontinho! " + galões + " galões equivalem a: " + litros + " litros.")
+
+// var xicaras = prompt("Informe o valor em xícaras: ")
+// var litros = xicaras * 1609.2
+// console.log("f. Prontinho! " + xicaras + " xícaras equivalem a: " + litros + " litros.")
+
 
 
 
