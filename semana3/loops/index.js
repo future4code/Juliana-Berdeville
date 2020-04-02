@@ -86,3 +86,32 @@ for (let i=0; i<array.length; i++)
     console.log("O elemento do index " + i + " é: " + array[i])
 }*/
 /*Exercícios de ecsrita de código*/
+
+/*Exercícios de ecsrita de código - Desafio 2*/
+
+/*Introdução do programa*/
+var user1 = prompt ("Olá! Informe o nome da(o) primeira(o) jogadora(or):")
+var user2 = prompt ("Informe o nome da(o) segunda(o) jogadora(or):")
+/*Introdução do programa*/
+
+/*Solicitar input dos usuários*/
+let  valor = prompt(user1 + " ,informe um número: ")
+let plapite = prompt("E aí, " + user2 + " consegue adivinhar o que a(o) " + user1 + " digitou?")
+/*Solicitar input dos usuários*/
+
+/*Tratamento de dados*/
+    while (valor != palpite)
+    {
+        var i = i + 1
+            if (valor > palpite)
+            {
+                    console.log("Errrouu! O numero é maior")
+            }
+                elsejuju
+                {
+                    console.log("Errrouu! O numero é menor")
+                }
+    }
+
+    console.log("Acertou miseravi! O numero de tentativas foi: " + i)
+/*Tratamento de dados*/
