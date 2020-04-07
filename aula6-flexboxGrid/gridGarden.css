@@ -1,0 +1,241 @@
+/* Level 1 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column-start:3;
+  }
+/* Level 2 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #poison {
+  grid-column-start:5;
+  }
+/* Level 3 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 1;
+  grid-column-end:4;
+  }
+/* Level 4 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 5;
+  grid-column-end:-5;
+  }
+/* Level 5 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 1;
+  grid-column-end:5;
+  }
+/* Level 6 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #poison {
+  grid-column-start:-3;
+  }
+/* Level 7 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 2;
+  grid-column-end: span 2;
+  }
+/* Level 8 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 1;
+  grid-column-end: span 5;
+  }
+/* Level 9 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column-start: span 3
+    grid-column-end: 6;
+  }
+/* Level 10 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column: 4 / 6;
+  }
+/* Level 11 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column: 2 / span 3;
+  }
+/* Level 12 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-row-start:3;
+  }
+/* Level 13 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-row: 3 / span 3;
+  }
+/* Level 14 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #poison {
+  grid-row:5;
+  grid-column:2;
+  }
+/* Level 15 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column: 2 / span 5;
+  grid-row: 1 / span 5;
+  }
+/* Level 16 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-area: 1/2/4/6;
+  }
+/* Level 17 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water-1 {
+    grid-area: 1 / 4 / 6 / 5;
+  }
+  
+  #water-2 {
+  grid-area: 2/3/5/6;
+  }
+/* Level 18 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  .water {
+    order: 0;
+  }
+  
+  #poison {
+  order:6;
+  }
+/* Level 19 of 28 */
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  .water {
+    order: 0;
+  }
+  
+  .poison {
+  order: -1;
+  }
+/* Level 20 of 28 */
+#garden {
+    display: grid;
+  grid-template-columns: 50%
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column: 1;
+    grid-row: 1;
+  }
+/* Level 21 of 28 */
+#garden {
+    display: grid;
+  grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column: 1;
+    grid-row: 1;
+  }
+/* Level 22 of 28 */
+#garden {
+    display: grid;
+  grid-template-columns: 100px 3em 40%
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+/* Level 23 of 28 */
+(não soube designar partição (fr) e os exercícios seguintes tratam disto)
+
