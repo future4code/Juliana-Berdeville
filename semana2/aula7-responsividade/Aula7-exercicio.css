@@ -1,0 +1,139 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER VERMELHO */
+#container
+{
+    display: grid;
+    grid-template-columns: fr 1fr ;
+    grid-template-rows: 3fr ;
+    row-gap: 15px;
+}
+
+#container #vermelho
+{
+    display: flex;
+    background: red;
+    border: 1px solid black;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+/* CONTAINER VERMELHO */
+
+
+/* CONTAINERS 1-2-3 */
+#container2
+{
+    display: grid;
+    row-gap: 15px;
+}
+#container2 .azul
+{
+    display: flex;
+    background: blue;
+    border: 1px solid black;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#container2 .amarelo
+{
+    display: flex;
+    background: yellow;
+    border: 1px solid black;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+#container2 .verde
+{
+    display: flex;
+    background: green;
+    border: 1px solid black;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* CONTAINERS 1-2-3 */
+
+
+/* CONTAINERS 4-5-6 */
+#container3
+{
+    display: grid;
+    row-gap: 10px;
+}
+#container3 .azul
+{
+    display: flex;
+    background: blue;
+    border: 1px solid black;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+#container3 .amarelo
+{
+    display: flex;
+    background: yellow;
+    border: 1px solid black;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+#container3 .verde
+{
+    display: flex;
+    background: green;
+    border: 1px solid black;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* CONTAINERS 4-5-6 */
+
+/* CONTAINERS 7-8 */
+#container4
+{
+    display: grid;
+    row-gap: 10px;
+}
+#container4 .preto
+{
+    display: flex;
+    background: black;
+    border: 1px solid black;
+    height: 80px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* CONTAINERS 7-8 */
+
+/* CONTAINERS 9-10-11 */
+#container5
+{
+    display: grid;
+    row-gap: 10px;
+}
+#container5 .branco
+{
+    display: flex;
+    background: white;
+    border: 1px solid black;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
