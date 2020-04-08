@@ -1,0 +1,81 @@
+/*Declaração de fontes externas*/
+@font-face 
+{
+    font-family: Shopie;
+    src: url(Shopie.otf);
+}
+/*Declaração de fontes externas*/
+
+#containerNovaTarefa /*container pra adição de novas tarefas*/
+{
+    width: 15vw;
+    height: 3vw;
+    padding: 1%;
+}
+
+#containerNovaTarefa > button /*button adicionador de tarefas*/
+{
+
+    width: 4rem;
+    height: 2rem;
+    background-color: grey;
+    display: block;
+    margin-top: 2px;
+    border: none;
+}
+
+#containerNovaTarefa > button:hover /*button adicionador de tarefas*/
+{
+
+    width: 4rem;
+    height: 2rem;
+    background-color: rgb(61, 55, 55);
+    display: block;
+    margin-top: 2px;
+    transition-delay: 1ms;
+    transition-duration: 2s;
+    border:none;
+    color: pink;
+}
+
+#containerNovaTarefa > input /*Input de tarefas*/
+{
+    width: 15rem;
+    height: 1rem;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 1px;
+}
+
+#diaDaSemana
+{
+    margin-top: 6px;
+}
+
+h1 /*Navbar minhas tarefas*/
+{
+   font-family: Shopie, sans-serif;
+}
+
+.planner-dias /*Dias da semana*/
+{
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: transparent black transparent transparent;
+    height: 70vh;
+    justify-content: center;
+    margin-top: 4px;
+    font-family: Shopie, verdana;
+}
+
+#planner /*container dos dias da semana*/
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+
