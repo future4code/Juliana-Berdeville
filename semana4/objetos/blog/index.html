@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <section id ="submit-post">
+    <form>
+        <input type="text" placeholder="Sobre o que deseja falar?" id="post-titulo">
+        <input type="text" placeholder="Quem está criando este post?" id="post-autor">
+        <input type="text" placeholder="Qual é o conteúdo deste post?" id="post-conteudo">
+        <textarea id="post-corpo-de-texto" rows="4" cols="50" placeholder="Comente sobre algum assunto aqui..." onkeydown="apertouEnter(event)"></textarea>
+        <button id="botao" type="button" onclick="enviaPostClick(event)">SEND!</button>
+    </form>
+    </section>
+
+    <section id ="Exibe-posts">
+    <h1>Posts recentes</h1>
+    </section>
+</body>
+</html>
