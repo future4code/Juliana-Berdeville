@@ -89,3 +89,23 @@
     font-size: 1rem;
     margin-left: -240px;
 }
+
+#listagem
+{
+    position: relative;
+    margin-top: 15vh;
+    height: 50vh;
+    width: 60vh;
+    font-size: 1rem;
+    margin-left: -230px;     
+}
+
+#botao
+{
+    position: relative;
+    margin-top: 36vh;
+    height: 5vh;
+    width: 10vh;
+    font-size: 1rem;
+    margin-left: -245px; 
+}

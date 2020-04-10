@@ -4,7 +4,6 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="index.js" defer></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=!, initial-scale=1.0">
     <title>Home</title>
 </head>
 <body>
@@ -18,7 +17,7 @@
     <span>Valores</span>
     <input type="text" id ="input-valor" placeholder="R$100,00">
     <select id="tipo-despesa">
-        <option value="#">Tipo de despesas</option>
+        <option>Tipo de despesas</option>
         <option value="Aluguel">Aluguel</option>
         <option value="Cartão de Crédito">Cartão de Crédito</option>
         <option value="Mercado">Mercado</option>
@@ -26,11 +25,13 @@
         <option value="assinaturas">Assinaturas</option>
         <option value="transporte">Transporte</option>
         <input type="text" id ="description" placeholder="Fale mais sobre sua despesa">
+        <button type="button" id="botao" onclick="apertouBotao(event)">SEND!</button>
     </select>
     </section>
 
     <section id = "lista-cadastro" class="section-style">
     <span>Suas despesas </span>
+    <p id ="listagem"></p>
     </section>
 
     <section id = "extrato" class="section-style">
