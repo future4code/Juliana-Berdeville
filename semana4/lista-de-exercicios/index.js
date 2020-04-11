@@ -235,3 +235,214 @@ const anonimizarPessoa = function ()
 anonimizarPessoa()
 */
 /*Exercício IV*/
+/*-----------------------------------------------------------------------------------------------------------------------*/
+/*Resolução da lista de exercícios*/
+/*LISTA II - Semana4-Aula-16*/
+/*Exercícios de funções de array*/
+/*Exercício I*/
+/*Primeira forma:FOR 
+Segunda forma: forEach()
+Terceira forma: do...while
+
+var arrayzinho = [1,2,3,4,5,6,7,8,9,0]
+
+for (let elemento in arrayzinho)
+    {
+        console.log(arrayzinho[elemento])
+    }
+
+
+arrayzinho.forEach(element => {console.log(arrayzinho[element])});
+
+do
+{
+    console.log(arrayzinho)
+}
+while (arrayzinho.lenght > 0)
+*/
+/*Exercício I*/
+
+/*Exercício II*/
+/*function soAdultos (arrayArgumento)
+      {
+         arrayargumento.forEach((pessoa, index, array)=> 
+            {
+                let idade, nome
+                idade = pessoa.idade
+                nome = pessoa.nome
+                    if (pessoa.idade >=20)
+                        {
+                            var arraySoParaAltinhos = []
+                            arraySoParaAltinhos.push(element.nome, element.idade)
+                        }
+            }) 
+            console.log("Os adultos são: " + arraySoParaAltinhos)
+       }
+
+function soCriancas (arrayArgumento)
+{
+   arrayargumento.forEach((pessoa, index, array)=> 
+      {
+          let idade, nome
+          idade = pessoa.idade
+          nome = pessoa.nome
+              if (pessoa.idade < 20)
+                  {
+                      var arraySoParaBaixinhos = []
+                      arraySoParaBaixinhos.push(element.nome, element.idade)
+                  }
+      }) 
+      console.log("As crianças e adolescentes são: " + arraySoParaBaixinhos)
+ }
+var arrayzinho = 
+[ 
+    {nome: "Pedro", idade: 20}, 
+    {nome: "João", idade: 10}, 
+    {nome: "Paula", idade: 12}, 
+    {nome: "Arthur", idade: 89}
+]
+
+soAdultos(arrayzinho)
+soCriancas(arrayzinho)*/
+/*Exercício II*/
+
+/*Exercício III*/
+/*const array = [1,2,3,4,5,6]*/
+
+/*const itemA = function ()
+{
+    array.forEach((element, index, array) => {
+    let arrayNovo = []
+    arrayNovo.push(element*2)
+    console.log(arrayNovo)
+    })
+}   
+itemA(array)*/
+
+/*const itemB = function ()
+{
+    array.forEach((element, index, array) => {
+        let arrayNovo = []
+        arrayNovo.push(element*3)
+        console.log(arrayNovo)
+        })
+}
+itemB(array)*/
+
+/*const itemC = function ()
+{
+    array.forEach((element, index, array) => {
+        let arrayNovo = []
+        if (element%2===0)
+            {
+                arrayNovo.push(element + " é par")
+            }
+            else 
+                {
+                    arrayNovo.push(element + " é ímpar")
+                }
+        console.log(arrayNovo)
+        })
+}
+
+itemC(array)*/
+/*Exercício III*/
+
+/*Exercício IV*/
+/*const pessoas = 
+[
+	{ nome: "Paula", idade: 12, altura: 1.8},
+	{ nome: "João", idade: 20, altura: 1.3},
+	{ nome: "Pedro", idade: 15, altura: 1.9},
+	{ nome: "Luciano", idade: 22, altura: 1.8},
+	{ nome: "Artur", idade: 10, altura: 1.2},
+	{ nome: "Soter", idade: 70, altura: 1.9}
+]*/
+/*const itemA = function ()
+    {
+        pessoas.filter((element, idade, altura, nome) => {
+            const novoArray =[]
+                if (element.altura >= 1.5 && 14 <= element.idade <=60) 
+                    { 
+                            novoArray.push(element.nome + ", " + element.idade + ", " + element.altura)
+                    }
+            console.log(novoArray)
+        })
+    }
+itemA(pessoas)*/
+
+/*const itemB = function ()
+{
+     pessoas.forEach ((element, idade, altura, nome) => 
+        {
+            if ((element.idade > 60 && element.idade < 14) || (element.altura < 1.5))
+                {
+                    return console.log(element.nome)
+                } 
+        
+        })
+}
+
+itemB(pessoas)*/
+/*Exercício IV*/
+
+/*Exercício V*/
+/*const consultas = 
+[
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+    { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const consultasMantidas = function ()
+{
+consultas.filter((element, nome, dataDaConsulta, cancelada)=>{
+    var novoArray = []
+    if (element.cancelada === false)
+    {
+        novoArray.push("Olá, Sr/Sra." + element.nome + "." +  " Estamos enviando esta mensagem para lembrá-lo/lembrá-la da sua consulta no dia " + element.dataDaConsulta + "." + " Por favor, acuse o recebimento deste e-mail.")
+    }
+     return console.log(novoArray)
+})
+}
+consultasMantidas(consultas)*/
+
+/*const consultaCancelada = function ()
+{
+consultas.filter((element, nome, dataDaConsulta, cancelada)=>{
+    var novoArray = []
+    if (element.cancelada === true)
+    {
+        novoArray.push("Olá, Sr./Sra. " + element.nome + ". Estamos enviando esta mensagem para lembrá-lo/lembrá-la da sua consulta no dia " + element.dataDaConsulta + " .Por favor, acuse o recebimento deste e-mail.")
+    }
+     return console.log(novoArray)
+})
+}
+
+consultaCancelada(consultas)*/
+/*Exercício V*/
+
+/*Exercício VI*/
+/*const contas = 
+[
+	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
+
+const atualizaSaldo = function ()
+{
+    contas.forEach((element, saldoTotal, compras) => 
+        {
+            var total = parseInt(element.compras[0] + element.compras[1] + element.compras[2] + element.compras[3]) 
+            parseInt(element.saldoTotal = element.saldoTotal -  total)
+        });
+        console.log(contas)
+}
+
+atualizaSaldo(contas)*/
+/*Exercício VI*/
