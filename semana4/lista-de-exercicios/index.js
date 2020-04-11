@@ -1,5 +1,5 @@
 /*Resolução da lista de exercícios*/
-/*LISTA I - Semana4-Aula*14/
+/*LISTA I - Semana4-Aula-15/
 /*Exercícios de leitura de código*/
 /*Exercício I*/
 /*1. A função recebe a quantidade de dinheiro em dólares fornecida pelo usuário e converte para reais, 
@@ -120,4 +120,118 @@ for(i=0; i<quantidadeDeNumerosPares; i++)
                  let resultado = segundoArgumento - primeiroArgumento
                  console.log("A diferença entre " + primeiroArgumento + " e " + segundoArgumento + " é: " + resultado)  
              }*/
+/*Exercício IV*/
+/*-----------------------------------------------------------------------------------------------------------------------*/
+/*Resolução da lista de exercícios*/
+/*LISTA II - Semana4-Aula-15/
+/*Exercícios de funções*/
+/*Exercício I*/
+/*function imprimeSegundoMaiorESegundoMenor (arrayzinho)
+{ 
+    let maior=0, menor=0, segundoMaior=0, segundoMenor=0
+    for (let elemento of arrayzinho)
+        {
+            if (elemento>segundoMaior)
+            {
+                segundoMaior = elemento
+            }            
+                else 
+                    {
+                        segundoMenor = elemento
+                    }
+                        for (let elementoII of arrayzinho)
+                            {
+                                if (elementoII > maior)
+                                    {
+                                        maior = elementoII
+                                    }
+                                        else 
+                                            {
+                                                menor = elementoII
+                                            }
+                            }
+        }
+}
+
+const arrayExercicioI = [2,4,8,6,15,23,121,184,7,-3,0]
+imprimeSegundoMaiorESegundoMenor(arrayExercicioI)*/
+/*Exercício I*/
+
+/*Exercício II*/
+/*var funcaoAnonima = function ()
+{
+    alert("Hello, LaBeNu!")
+}
+
+funcaoAnonima()*/
+/*Exercício II*/
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/*Exercícios de objetos*/
+/*Exercício I*/
+/*Objetos são estruturas que guardam múltiplas informações de determinados agentes existentes no mundo real
+-- ou escopo -- e que, ao transportarmos para o ambiente abstrato digital, são representados como uma lista contendo
+diversas características. 
+Podemos combinar arrays e objetos se for necessário armazenar vários objetos num elemento só, daí surgem os arrays de Objeto.*/
+/*Exercício I*/
+
+/*Exercício II*/
+/*function criaRetangulo (lado1, lado2)
+    {
+        const resultadoArea, resultadoPerimetro
+        resultadoArea = lado1*lado2
+        resultadoPerimetro = 2*(lado1+lado2)
+        
+        let oRetangulo =
+         {
+             largura: lado1,
+             altura: lado2,
+             perimetro: resultadoPerimetro,
+             area: resultadoArea
+         }
+    }*/
+/*Exercício II*/
+
+/*Exercício III*/
+/*const oFilmeFavorito =
+{
+    titulo: 'O Grande Hotel Budapeste',
+    ano: 2014,
+    diretor: 'Wes Anderson',
+    elenco: 'Diane Krueger, Ralph Fiennes, Tony Revolori, Saoirse Ronan, Adrien Brody, Willem Dafoe, Léa Seydoux, Mathieu Amalric'
+}
+
+console.log("Venha assistir ao filme" + oFilmeFavorito.titulo + " , de " + oFilmeFavorito.ano + ", dirigido por " + oFilmeFavorito.diretor + " e estrelado por: " + oFilmeFavorito.elenco)*/
+/*Exercício III*/
+
+/*Exercício IV*/
+/*
+const anonimizarPessoa = function ()
+{
+    const umaPessoaQualquer =
+     {
+        nome:'Juju',
+        idade:'23' ,
+        email:'aaa@aaa.com' ,
+        endereco:'Rua dos bobos, 0' 
+    }
+
+    var arrayUmaPessoaQualquer = []
+    arrayUmaPessoaQualquer.push(umaPessoaQualquer)
+
+    const umaNovaPessoaQualquer =
+    {
+        nome:'ANÔNIMO',
+        idade: umaPessoaQualquer.idade,
+        email: umaPessoaQualquer.email,
+        endereco: umaPessoaQualquer.endereco
+    }
+
+    var arrayUmaNovaPessoaQualquer = []
+    arrayUmaNovaPessoaQualquer.push(umaNovaPessoaQualquer)
+
+    return console.log(arrayUmaNovaPessoaQualquer)
+} 
+
+anonimizarPessoa()
+*/
 /*Exercício IV*/
