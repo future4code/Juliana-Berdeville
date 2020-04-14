@@ -20,13 +20,13 @@ function App() {
     <div className="App">
       <div className="page-section-container">
         <h2>About me</h2>
-        {/* Chamando o componente CardGrande */}
+        {/* Chamando o componente CardGrande*/}
           <CardGrande 
             imagem={bananinha}
             nome="Juliana Berdeville" 
             descricao="Oi. Sou Juliana Berdeville, graduanda em Ciência da Computação e estudante da LaBeNu em Web Development Fullstack."
           />
-        {/* Chamando o componente CardGrande */}
+        {/*Chamando o componente CardGrande*/}
 
         {/*Chamando o componente CardPequeno*/}
           <CardPequeno
@@ -46,32 +46,32 @@ function App() {
             />
         {/*Chamando o componente CardEducacao*/}
         
-        {/* Chamando o componente ImagemButton */}
+        {/*Chamando o componente ImagemButton */}
           <ImagemButton 
             imagem="https://image.flaticon.com/icons/png/512/117/117472.png" 
             texto="Ver mais"
           />
-        {/* Chamando o componente ImagemButton */}
+        {/*Chamando o componente ImagemButton */}
       </div>
 
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
-        {/* Importando o componente CardGrande*/}
+        {/*Importando o componente CardGrande*/}
           <CardGrande 
             imagem={batatinha}
             nome="RTM" 
             descricao="Atuei em NOC - Network Operational Center - registrando chamados, mantendo rede backbone, prestando suporte à rede privada direcionada ao ambiente de mercado financeiro. 
                       Tempo de atuação: 2017-2019." 
           />
-        {/* Importando o componente CardGrande*/}
+        {/*Importando o componente CardGrande*/}
 
-        {/* Importando o componente CardGrande*/}
+        {/*Importando o componente CardGrande*/}
         <CardGrande 
           imagem={abacatezinho}
           nome="LaBeNu" 
           descricao="Aprendendo a ser web dev fullstack e quebrando a cabeça com React. Oremos." 
         />
-        {/* Importando o componente CardGrande*/}
+        {/*Importando o componente CardGrande*/}
       </div>
 
       <div className="page-section-container">
