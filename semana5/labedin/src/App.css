@@ -4,16 +4,11 @@
   box-sizing: border-box;
 }
 
-body
-{
-  
-}
-
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  background-image: url('imagens/polkadot-background.png');
 }
 
 .page-section-container {
