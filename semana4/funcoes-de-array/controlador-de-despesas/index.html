@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <navbar id ="navbar">
+    <span>Controlador de despesas</span>
+    </navbar>
+
+    <div id ="container">
+
+    <section id = "cadastro" class="section-style">
+    <span>Valores</span>
+    <input type="text" id ="input-valor" placeholder="R$100,00">
+    <select id="tipo-despesa">
+        <option>Tipo de despesas</option>
+        <option value="Aluguel">Aluguel</option>
+        <option value="Cartão de Crédito">Cartão de Crédito</option>
+        <option value="Mercado">Mercado</option>
+        <option value="eletrônicos">Eletrônicos</option>
+        <option value="assinaturas">Assinaturas</option>
+        <option value="transporte">Transporte</option>
+        <input type="text" id ="description" placeholder="Fale mais sobre sua despesa">
+        <button type="button" id="botao" onclick="apertouBotao(event)">SEND!</button>
+    </select>
+    </section>
+
+    <section id = "lista-cadastro" class="section-style">
+    <span>Suas despesas </span>
+    <p id ="listagem"></p>
+    </section>
+
+    <section id = "extrato" class="section-style">
+
+    <span>Extrato</span>
+    </section>
+    </div>
+</body>
+</html>

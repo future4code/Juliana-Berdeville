@@ -1,0 +1,111 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+#navbar
+{
+    display: flex;
+    height: 5vw;
+    background-color: darkkhaki;
+    justify-content: center;
+}
+
+#navbar > span
+{
+    display: flex;
+    align-self: center;
+    font-size: 200%;
+}
+#container
+{
+    display: flex;
+    flex-direction: row; 
+    justify-items: center;
+    justify-content: space-evenly;
+    margin-top: 2vw;
+    align-items: stretch;
+
+}
+
+.section-style
+{
+    display: flex;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: transparent black transparent transparent;
+    width: 15vw;
+    height: 38vw;
+    justify-content: center;
+}
+
+#extrato
+{
+    border: none;
+    margin-right: -20vh;
+}
+
+#lista-cadastro
+{
+    margin-right: -20vh;
+}
+
+.section-style > span 
+{
+    font-size: 5vh;
+    margin-top: 1vh;
+    margin-left: -40vh;
+    text-align: center;
+    display: block;
+}
+
+#input-valor
+{
+    position: relative;
+    margin-top: 15vh;
+    height: 3vh;
+    width: 30vh;
+    font-size: 1rem;
+    margin-left: -190px;   
+}
+
+#tipo-despesa
+{
+    position: relative;
+    margin-top: 22vh;
+    height: 4vh;
+    width: 31vh;
+    font-size: 1rem;
+    margin-left: -240px;
+}
+
+#description
+{
+    position: relative;
+    margin-top: 29vh;
+    height: 4vh;
+    width: 31vh;
+    font-size: 1rem;
+    margin-left: -240px;
+}
+
+#listagem
+{
+    position: relative;
+    margin-top: 15vh;
+    height: 50vh;
+    width: 60vh;
+    font-size: 1rem;
+    margin-left: -230px;     
+}
+
+#botao
+{
+    position: relative;
+    margin-top: 36vh;
+    height: 5vh;
+    width: 10vh;
+    font-size: 1rem;
+    margin-left: -245px; 
+}
