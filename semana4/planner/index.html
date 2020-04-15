@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Planner - Home</title>
+</head>
+<body>
+    <h1>Minhas tarefas</h1>
+    <section id="planner">
+    <div class="planner-dias" id="segunda"><h2>Segunda-feira</h2></div>
+        <div class="planner-dias" id="terca"><h2>Terça-feira</h2></div>
+        <div class="planner-dias" id="quarta"><h2>Quarta-feira</h2></div>
+        <div class="planner-dias" id="quinta"><h2>Quinta-feira</h2></div>
+        <div class="planner-dias" id="sexta"><h2>Sexta-feira</h2></div>
+        <div class="planner-dias" id="sabado"><h2>Sábado</h2></div>
+        <div class="planner-dias" id="domingo"><h2>Domingo</h2></div>
+    </section>
+
+    <div id="containerNovaTarefa">
+        <input type="text" name="novaTarefa" id="novaTarefa" placeholder="O que você quer fazer?" autocomplete="off">
+        <select name="diaDaSemana" id="diaDaSemana">
+            <option>Dia da semana</option>
+            <option>Segunda-feira</option>
+            <option>Terça-feira</option>
+            <option>Quarta-feira</option>
+            <option>Quinta-feira</option>
+            <option>Sexta-feira</option>
+            <option>Sábado</option>
+            <option>Domingo</option>
+        </select>
+        <button type="button" onclick='addTarefa()' id="botao">Ok!</button>
+    </div>
+</body>
+</html>

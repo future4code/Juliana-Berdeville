@@ -87,6 +87,7 @@ for (let i=0; i<array.length; i++)
 }*/
 /*Exercícios de ecsrita de código*/
 
+
 /*Exercícios de ecsrita de código - Desafio 2*/
 
 /*Introdução do programa*/
@@ -107,7 +108,7 @@ let plapite = prompt("E aí, " + user2 + " consegue adivinhar o que a(o) " + use
             {
                     console.log("Errrouu! O numero é maior")
             }
-                elsejuju
+                else
                 {
                     console.log("Errrouu! O numero é menor")
                 }
@@ -115,3 +116,33 @@ let plapite = prompt("E aí, " + user2 + " consegue adivinhar o que a(o) " + use
 
     console.log("Acertou miseravi! O numero de tentativas foi: " + i)
 /*Tratamento de dados*/
+
+/*Exercícios de interpretação de código - Desafio 2*/
+
+/*introdução do programa*/
+var user1 = prompt("Informe o nome do primeiro usuário: ")
+var user2 = prompt("Informe o nome do segundo usuário: ")
+/*introdução do programa*/
+
+console.log("Vamos jogar!")
+
+/*solicitação dos inputs aos usuários*/
+var valor = prompt("Olá. Para começarmos a jogar," + user1 + " , insira um numero: ")
+var palpite = prompt ("E aí, " +user2 + "? Consegue adivinhar o que foi o(a) " + user1 + " digitou?")
+/*solicitação dos inputs aos usuários*/
+
+    while (palpite != valor)
+        {
+            let i = i +1
+            console.log("Errrouu!")
+                if (palpite < valor)
+                    { 
+                        console.log("O numero é maior.")
+                    }
+                        else if (palpite > valor)
+                            {
+                                console.log("O numero é menor.")
+                            }
+        }
+        console.log("Acertou! O numero de tentativas foi: " + i)
+
