@@ -7,20 +7,29 @@ import Secao4 from './components/Secao4'
 import './App.css';
 import styled from 'styled-components'
 
-// class App extends React.Component 
-// {
-//   render ()
-function App ()
-  {
-    return 
-    (
-      <div>
-          <h1>Bem-vindo(a)!</h1>
-          <button type="button">NEXT</button>
-      </div>
-    );
-
+class App extends React.Component 
+{
+  state = {
+    page: 1,
   }
 
+onClickRenderizaAPagina = () => {
+
+  con
+
+}
+
+}
+
+  render ()
+  {
+    return (
+        <div>
+            <h1>Bem-vindo(a)!</h1>
+            <button type="button">NEXT</button>
+       </div>
+      );
+  }
+}
 export default App;
 
