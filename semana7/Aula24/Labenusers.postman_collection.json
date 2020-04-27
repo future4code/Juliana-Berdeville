@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "1bf0cb1f-a3b3-4b4e-87d3-f6075bd9f215",
+		"name": "Labenusers",
+		"description": "Collection pra resolição dos exercícios propostos para a tarde de hoje, 24.04.2020 (Aula 24).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Exercicio I - Criar 3 playlists - playlist 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "juliana-berdeville-julian",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"mpb boladona que eu gosto\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				},
+				"description": "1. Comece criando três playlists, com os gêneros de músicas de que você mais gosta. \n  "
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio I - Criar 3 playlists - playlist 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "juliana-berdeville-julian",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"pagode anos 90\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				},
+				"description": "1. Comece criando três playlists, com os gêneros de músicas de que você mais gosta. \n  "
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio I - Criar 3 playlists - playlist 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "juliana-berdeville-julian",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"80's will go on\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists?",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				},
+				"description": "1. Comece criando três playlists, com os gêneros de músicas de que você mais gosta. \n  "
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio II - verificar playlists recem-criadas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "juliana-berdeville-julian",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists?",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				},
+				"description": "2. Verifique se as operações acima deram certo, ou seja, veja todas as suas listas.\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio III - Adicionando 2 musicas às playlists - Playlist1,Parte1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "juliana-berdeville-julian",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Cajuina\",\n\t\"artist\":\"Caetano Veloso\",\n\t\"url\": \"https://www.youtube.com/watch?v=nmd7Nw9KqaE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "208f982a-0898-4b6c-8ca8-2d438c5b740a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio III - Adicionando 2 musicas às playlists - Playlist1,Parte2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "juliana-berdeville-julian"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Linha do Equador\",\n\t\"artist\":\"Caetano Veloso\",\n\t\"url\": \"https://www.youtube.com/watch?v=8WUtiF49eek\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "208f982a-0898-4b6c-8ca8-2d438c5b740a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio III - Adicionando 2 musicas às playlists - Playlist2,Parte1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "juliana-berdeville-julian"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Inaraí\",\n\t\"artist\":\"Katinguele\",\n\t\"url\": \"https://www.youtube.com/watch?v=lc9fsP3NtJw\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "99a7cea6-bb62-4d3c-a34a-89019031adc3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio III - Adicionando 2 musicas às playlists - Playlist2,Parte2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "juliana-berdeville-julian"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Intriga da Oposicao\",\n\t\"artist\":\"Belo\",\n\t\"url\": \"https://www.youtube.com/watch?v=ESCvINx5XLo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "99a7cea6-bb62-4d3c-a34a-89019031adc3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio III - Adicionando 2 musicas às playlists - Playlist3,parte1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "juliana-berdeville-julian"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"I wanna dance with somebody\",\n\t\"artist\":\"Whitney Houston\",\n\t\"url\": \"https://www.youtube.com/watch?v=eH3giaIzONA\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "65568fc6-ae8b-47ab-9ae4-3e210d46b61e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio III - Adicionando 2 musicas às playlists - Playlist3,parte2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "juliana-berdeville-julian"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Pump Up the Jam\",\n\t\"artist\":\"Technotronic\",\n\t\"url\": \"https://www.youtube.com/watch?v=9EcjWd-O4jI\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "65568fc6-ae8b-47ab-9ae4-3e210d46b61e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio IV - Verificando musicas adicionadas - Playlist1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "juliana-berdeville-julian",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "208f982a-0898-4b6c-8ca8-2d438c5b740a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio IV - Verificando musicas adicionadas - Playlist2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "juliana-berdeville-julian",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "99a7cea6-bb62-4d3c-a34a-89019031adc3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercicio IV - Verificando musicas adicionadas - Playlist3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "juliana-berdeville-julian",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "65568fc6-ae8b-47ab-9ae4-3e210d46b61e"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
