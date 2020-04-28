@@ -9,7 +9,7 @@ margin-top: 10vh;
 margin-left: 62vh;
 `
 const Bananete = styled.div`
-  border: 1px solid red;
+  margin-top: 2px;
   
 `
 
