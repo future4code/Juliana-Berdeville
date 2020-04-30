@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import axios from 'axios'
 
 const Bananinha = styled.div` /*sempre que for styled é letra maiuscula*/
 border: 1px dotted black;
@@ -32,6 +33,16 @@ export class Cadastro extends React.Component {
   onChangeEmail = (event) => {
     this.setState({emailContent: event.target.value})
 }
+
+  /*Criação da lógica do botão de cadastro de usuários*/
+  onClickSend = ( ) => {
+    const bananico = {  
+        usuario: this.state.nameContent,
+        email: this.state.emailContent
+    }
+  }
+  /*Criação da lógica do botão de cadastro de usuários*/
+
   /*Alteração do estado pro email*/
   render () {
   return (
@@ -42,7 +53,7 @@ export class Cadastro extends React.Component {
             <input type="text" name="text" id="text"></input><br></br>
             <br></br><label>E-mail:</label><br></br>
             <input type="text" name="text" id="text"></input><br></br>
-            <br></br><button>SEND</button>
+            <br></br><button onClick={this.onClickSend}>SEND</button>
             </Bananete>
         </Bananinha>
       </div>
