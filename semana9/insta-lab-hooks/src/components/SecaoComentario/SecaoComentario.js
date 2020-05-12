@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from "styled-components"
+
 
 	const CommentContainer = styled.div`
     display: flex;
@@ -11,10 +12,9 @@ import styled from "styled-components"
     width: 100%;
     margin-right: 5px;
 	`
-
-	const [inputControlado,setInputControlado] = useState(' ')
-
 	const SecaoComentario = (props) => {
+	
+	const [inputControlado, setInputControlado] = useState(' ')
 
 	const onChangeComentario = (event) => {
 		setInputControlado(event.target.value)

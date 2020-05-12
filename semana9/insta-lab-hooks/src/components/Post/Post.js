@@ -37,14 +37,11 @@ const Post = (props) => {
       const listaDeComentarios = [...comentarios, comentario]
       setComentarios(comentarios=listaDeComentarios)
       setComentando(false)
-      setNumeroComentarios(numeroComentarios + 1)
+      setNumerosComentarios(numeroComentarios + 1)
     }
 
   /*IconeCurtida recebe um ternário que alterna entre os ícones de coração preto/branco de acordo com o valor de curtido*/
   const iconeCurtida = curtido ? (iconeCoracaoPreto) : (iconeCoracaoBranco)
-
-  const iconeCurtida = this.state.curtido ? (iconeCoracaoPreto) : (iconeCoracaoBranco)
-
   const caixaDeComentario = comentando ? (
       <SecaoComentario enviarComentario={enviarComentario}/>
     ) : (
