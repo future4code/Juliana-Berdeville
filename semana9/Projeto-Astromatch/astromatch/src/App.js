@@ -67,10 +67,11 @@ const LeLogo = styled.h1`
 /*Ainda em desenvolvimento
 onClickCheckMatches = () => {
 }
-
-onClickClearMatches = () => {
-}
 */
+onClickClearMatches = () => {
+  alert("0 matches! :(")
+}
+
 function App() {
   return (
     <Background>
@@ -79,7 +80,7 @@ function App() {
         <ContentHolder> <Profiles/> </ContentHolder>
       </ContainerGeral>
       <CheckMatches>check matches</CheckMatches>
-      <ClearMatches>clear matches</ClearMatches>
+      <ClearMatches onClick={onClickClearMatches()}>clear matches</ClearMatches>
     </Background>
   );
 }
