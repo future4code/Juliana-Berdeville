@@ -41,30 +41,29 @@ const ClearMatches = styled(Button)`
         }
 `
 const ContainerGeral = styled.div`
-  height: 85vh;
-  width: 700px;
+    height: 85vh;
+    width: 700px;
 `
 const Logo = styled.div`
-  margin-top: 5vh;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  flex-direction: row;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: row;
 `
 
 const ContentHolder = styled.div`
 
-  margin-top: 5vh;
-  display: flex;
+    margin-top: 5vh;
+    display: flex;
 `
 const LeLogo = styled.h1`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
 `
-
 /*Ainda em desenvolvimento
 onClickCheckMatches = () => {
 }
@@ -72,7 +71,6 @@ onClickCheckMatches = () => {
 onClickClearMatches = () => {
 }
 */
-
 function App() {
   return (
     <Background>
@@ -85,5 +83,4 @@ function App() {
     </Background>
   );
 }
-
 export default App;

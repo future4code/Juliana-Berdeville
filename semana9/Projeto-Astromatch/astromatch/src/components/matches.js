@@ -48,7 +48,6 @@ const MatchName = styled(Typography)`
 
 function Matches() {
 
-  
     const [pplProfiles, setpplProfiles] = useState([ ])
 
     useEffect(() => {
