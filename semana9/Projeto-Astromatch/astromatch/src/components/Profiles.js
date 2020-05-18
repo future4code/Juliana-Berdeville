@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 import React from 'react'
 import styled from 'styled-components'
-import axios from 'axios'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
@@ -72,43 +71,23 @@ const Wow = styled(Button)`
                         }
             
 `
-function Profiles() {
+function Profiles(props) {
 
-  
-    const [pplProfiles, setpplProfiles] = useState([ ])
+/*   A query feita na API está no componente App (Pai dos demais componentes). Os componentes filhos recebem as
+    informações da query na API como props - por isso sua forma de componente funcional recebe 'props' como
+    argumento 
+*/
 
-    useEffect(() => {
-        axios
-        .get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/aluno/person`)
-        .then(response => {
-            setpplProfiles(response.data.profile);
-            console.log(response.data)
-        })
-        .catch(err => {
-            console.log(err);
-            });
-    }, [setpplProfiles]);
-
-    return (
+       return (
         <ProfileCard> {/*<Card>*/}
-                <ProfileCardMedia image={pplProfiles.photo}/> {/*<CardMedia/>*/}
+                <ProfileCardMedia image={props.profile.photo}/> {/*<CardMedia/>*/}
             <ProfileCardContent> {/*<CardContent>*/}
-                <ProfileBio>name: {pplProfiles.name}</ProfileBio> {/*Typography*/}
-                <ProfileBio>age: {pplProfiles.age}</ProfileBio> {/*Typography*/}
-                <ProfileBio>bio: {pplProfiles.bio}</ProfileBio> {/*Typography*/}
-                <Eww>eww</Eww> {/*Button*/}
-                <Wow>wow</Wow> {/*Button*/}
+                <ProfileBio>name: {props.profile.name}, {props.profile.age}</ProfileBio> {/*Typography*/}
+                <ProfileBio>bio: {props.profile.bio}</ProfileBio> {/*Typography*/}
+                <Eww onClick={props.onClickEw}>eww</Eww> {/*Button*/}
+                <Wow onClick={props.onClickWow}>wow</Wow> {/*Button*/}
             </ProfileCardContent> {/*<CardContent>*/}
       </ProfileCard> 
     )
-  }
-
-
-
-
-
-
-
-
-  
-  export default Profiles;
+}
+export default Profiles;

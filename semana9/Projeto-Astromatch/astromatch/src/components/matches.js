@@ -1,4 +1,5 @@
-
+import React from 'react'
+import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import Button from '@material-ui/core/Button'
@@ -8,6 +9,7 @@ import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
+import MatchListItem from './MatchListItem'
 
 const ProfileCard = styled(Card)`
         border-radius: 20px;
@@ -41,37 +43,31 @@ const ProfileCardContent = styled(CardContent)`
           text-align: left;
           padding-left: 0;
           padding: 2px;   
-`
-const MatchName = styled(Typography)`
-           margin-bottom: 2px;
+          display: flex;
+          flex-direction: row;
 `
 
 function Matches() {
 
-    const [pplProfiles, setpplProfiles] = useState([ ])
+    const [matches, setMatches] = useState([ ])
 
-    useEffect(() => {
-        axios
-        .get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/aluno/person`)
-        .then(response => {
-            setpplProfiles(response.data.profile);
-            console.log(response.data)
-        })
-        .catch(err => {
-            console.log(err);
-            });
-    }, [setpplProfiles]);
+     useEffect(() => {
+         axios.get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/aluno/matches`)
+            .then(response => {
+                                    setMatches(response.data.matches);
+                                    console.log(response.data.matches)
+                                })
+     }, []);
 
-    
     return (
         <ProfileCard> {/*<Card>*/}
-                <ProfileCardMedia image={pplProfiles.photo}/> {/*<CardMedia/>*/}
             <ProfileCardContent> {/*<CardContent>*/}
-                    <img src={pplProfiles.photo} alt={`${pplProfiles.name} is a match!`}/>
-                    <MatchName>name: {pplProfiles.name}</MatchName> {/*Typography*/}  
+                {matches.map((profile) => { return <MatchListItem profile={profile}/> })}
             </ProfileCardContent> {/*<CardContent>*/}
       </ProfileCard> 
     )
   }
 
   export default Matches;
+
+  

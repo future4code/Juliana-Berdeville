@@ -1,7 +1,10 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Profiles from './components/Profiles'
+import Matches from './components/Matches'
 import Button from '@material-ui/core/Button'
+import axios from 'axios'
 
 const Background = styled.div`
   background-color: white;
@@ -26,6 +29,7 @@ const CheckMatches = styled(Button)`
           transition: 1s;
         }
 `
+
 const ClearMatches = styled(Button)`
   display: block;
   bottom:0;
@@ -63,26 +67,74 @@ const LeLogo = styled.h1`
     align-items: center;
     font-family: 'Permanent Marker', cursive;
     font-size: 100px;
+        :hover{
+                  background: -webkit-linear-gradient(#c70039, #f67280);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+              }
 `
 /*Ainda em desenvolvimento
 onClickCheckMatches = () => {
 }
 */
-onClickClearMatches = () => {
-  alert("0 matches! :(")
-}
+// onClickClearMatches = () => {
+//   alert("0 matches! :(")
+// }
 
 function App() {
+
+   const [pplProfiles, setpplProfiles] = useState({ })
+   const [selectedPage, setSelectedPage] = useState('Profiles')
+
+    useEffect(() => {
+      axios.get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/aluno/person`)
+      .then(response => { 
+            setpplProfiles(response.data.profile)
+          })
+    }, [setpplProfiles])
+
+   const renderSelectedPage = () => {
+        switch (selectedPage) {
+              case 'Profiles': 
+                return <Profiles profile={pplProfiles} onClickEw={onClickEw()}/>
+              case 'Matches':
+                  return <Matches/>
+        }
+    }
+
+  const onClickCheckMatches = () => {
+      setSelectedPage('Matches')
+  }
+
+  const onClickCheckProfiles = () => {
+     setSelectedPage('Profiles')
+   }
+
+  const onClickEw = () => {
+      const body = {
+                      choice: false, 
+                      id: pplProfiles.id,
+                  }
+        axios.post('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/aluno/choose-person', body).then((response) =>
+            console.log(response)
+          )
+    }
+
+const onClickWow = () => {
+
+}
+  
   return (
-    <Background>
-      <ContainerGeral>
-        <Logo><LeLogo>AstroMatch</LeLogo></Logo>
-        <ContentHolder> <Profiles/> </ContentHolder>
-      </ContainerGeral>
-      <CheckMatches>check matches</CheckMatches>
-      <ClearMatches onClick={onClickClearMatches()}>clear matches</ClearMatches>
-    </Background>
-  );
+
+            <Background>
+              <ContainerGeral>
+                <Logo><LeLogo onClick={() => onClickCheckProfiles()}>AstroMatch</LeLogo></Logo>
+                <ContentHolder> {renderSelectedPage()}</ContentHolder>
+              </ContainerGeral>
+              <CheckMatches onClick={() => onClickCheckMatches()}>check matches</CheckMatches>
+              <ClearMatches>clear matches</ClearMatches>
+            </Background>
+          )
 }
 
 export default App;
