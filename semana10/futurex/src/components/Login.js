@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components'
-import Home from './components/Home'
 
 
-function App () 
+function Login () 
 {
   return (
     <div>
-      <Home/>
+      
     </div>
   );
 }
