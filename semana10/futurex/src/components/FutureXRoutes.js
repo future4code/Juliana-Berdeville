@@ -1,14 +1,11 @@
-import React from 'react';
-import {FutureXRoutes} from './components/FutureXRoutes'
+import React from 'react'
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
-import Home from './components/Home'
-import Login from './components/Login'
-import TravelerPage from './components/TravelerPage'
-import Adminpage from './components/AdminPage'
+import Home from './Home'
+import Adminpage from './AdminPage'
+import TravelerPage from './TravelerPage'
 
 
-
-function App () 
+function FuturexRoutes () 
 {
   return (
     <BrowserRouter>
@@ -16,10 +13,9 @@ function App ()
                 <Route exact path="/"> <Home /> </Route>
                 <Route exact path="/Administrador"> <Adminpage /> </Route>
                 <Route exact path="/Traveler"> <TravelerPage /> </Route>
-                <Route exact path="/Login"> <Login /> </Route>
         </Switch>
     </BrowserRouter>
   );
 }
 
-export default App;
+export default FuturexRoutes;

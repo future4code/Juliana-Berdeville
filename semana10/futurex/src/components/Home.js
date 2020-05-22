@@ -1,8 +1,17 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+import Login from './Login'
+import IconButton from '@material-ui/core/IconButton'
+import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff'
+import {useHistory} from 'react-router'
+
 
 const BackgroundDiv = styled.div`
-    background-color: #ca5116;
+    background-image: url("/background-futurex.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height:100vh;
     display: flex;
     flex-direction: column;
@@ -13,16 +22,16 @@ const LogoDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 1px solid red;
+    margin-top: 60px;
     width: 30%;
 `
 const LogoH1Future = styled.h1`
     font-family:'Playfair Display', serif;
-    font-size: 90px;
+    font-size: 150px;
 `
 const LogoH1X= styled.h1`
     font-family: 'Courgette', cursive;
-    font-size: 110px;
+    font-size: 180px;
     color: #f1e3cb;
     padding-left: 2px;
     padding-top: 10px;
@@ -41,13 +50,50 @@ const RounderDivI = styled.div`
     border-radius: 50%;
     display: inline-block;
   `
+const IntroParagraph = styled.p`
+    color: #F1E3CB;
+    font-family: 'Hind', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+`
+const ParagraphDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+ const ButtonsDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+ `
+function Home () {
 
-function Home () 
-{
+  const history = useHistory()
+
+  const goToLoginPage = () => {
+    history.push("/Login");
+   }
+ 
+  const goToTravelerPage = () => {
+   history.push("/Traveler");
+  }
+
   return (
     <BackgroundDiv>
-      <LogoDiv><LogoH1Future>Future</LogoH1Future><LogoH1X>X</LogoH1X></LogoDiv>
-      <RounderDivI></RounderDivI>
+      <LogoDiv>
+        <LogoH1Future>Future</LogoH1Future><LogoH1X>X</LogoH1X>
+      </LogoDiv>
+
+      <ParagraphDiv>
+          <IntroParagraph>
+              Descobrindo mundos, criando (ou apagando) memórias e vivendo momentos inesquecíveis.
+          </IntroParagraph>
+      </ParagraphDiv> 
+
+      <ButtonsDiv>
+          <IconButton title="Sou viajante" onClick={goToTravelerPage}> <FlightTakeoffIcon/> </IconButton> 
+          <IconButton title="Sou administrador" onClick={goToLoginPage}> <FingerprintIcon/> </IconButton>
+      </ButtonsDiv>
     </BackgroundDiv>
   );
 }
