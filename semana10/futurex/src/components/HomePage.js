@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
-import Login from './Login'
+import LoginPage from './LoginPage'
 import IconButton from '@material-ui/core/IconButton'
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
 import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff'
@@ -66,7 +66,7 @@ const ParagraphDiv = styled.div`
   flex-direction: column;
   margin-top: 60px;
  `
-function Home () {
+function HomePage () {
 
   const history = useHistory()
 
@@ -75,7 +75,7 @@ function Home () {
    }
  
   const goToTravelerPage = () => {
-   history.push("/Traveler");
+   history.push("/Viagens");
   }
 
   return (
@@ -98,4 +98,4 @@ function Home () {
   );
 }
 
-export default Home;
+export default HomePage;

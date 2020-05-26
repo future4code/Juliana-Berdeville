@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
+import Input from '@material-ui/core/Input'
+import { useHistory } from 'react-router';
 
 const BackgroundDiv = styled.div`
     display: flex;
@@ -60,14 +61,14 @@ const LogoH1X = styled.div`
     margin-left: 4px;
     margin-top: 2px;
 `
-const Search = styled(TextField)`
+const Search = styled(Input)`
     width: 500px;
-    height: auto;
+    height: 40px;
     background-color: #581C0C;
     margin-top: 20px;
     align-self: center;
     justify-content: center;
-    border: none;
+    text-align: center;
 `
 const LeftCircleDivTitle = styled.h1`
     color: #F9B384;
@@ -84,22 +85,30 @@ const LeftCircleDivP = styled.p`
     width: 250px;
     font-size: 15px;
 `
-const BotoesCustomizados = styled(Button)`
+const BotoesCustomizados = styled.button`
     margin-top: 70px;
     background-color: #581C0C;
     color: #ffff;
     box-shadow: none;
-    padding: 20px;
+    padding: 5px;
+    border-radius: 5%;
         :hover{
                     background-color: #CA5116;
                     transition: 2s;         
                }
 `
-function TravelerPage () {
+function PublicPage () {
+    const history = useHistory()
+    const goToHomePage=()=>{
+        history.replace("/")
+    }
+    const goToPublicTripsPage=()=>{
+        history.push("/Viagens/detalhes-da-viagem")
+    }
   return (
    <BackgroundDiv>
-       <NavbarDiv> <LogoH1Future>Future</LogoH1Future><LogoH1X>X</LogoH1X> </NavbarDiv>
-       <Search placeholder="pesquisar" label="pesquisar" margin="normal" variant="outlined"/>
+       <NavbarDiv> <LogoH1Future onClick={goToHomePage}>Future</LogoH1Future><LogoH1X>X</LogoH1X> </NavbarDiv>
+       <Search placeholder="pesquisar"/>
        <CircleDivsContainer>
         <LeftCircleDiv>
             <LeftCircleDivTitle>
@@ -111,7 +120,7 @@ function TravelerPage () {
                 cósmica.
                 Por ser um planeta gasoso, é composto principalmente por hidrogênio e hélio.
             </LeftCircleDivP>
-            <Button>inscreva-se</Button>
+            <Button onClick={goToPublicTripsPage}>inscreva-se</Button>
         </LeftCircleDiv>
 
         <RightCircleDiv>
@@ -124,4 +133,4 @@ function TravelerPage () {
   );
 }
 
-export default TravelerPage;
+export default PublicPage;

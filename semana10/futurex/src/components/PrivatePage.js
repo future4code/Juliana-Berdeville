@@ -52,7 +52,7 @@ const LogoH1X = styled.div`
 const CircleDivParagraph = styled.p`
     margin-top: 150px;
     padding: 10px;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Hind', sans-serif;
 `
 const AdminParapraph = styled.p`
    margin-left: 900px;
@@ -67,7 +67,7 @@ const AdminH1 = styled.h1`
     font-family: 'Julius Sans One', sans-serif;
     font-size: 60px;
 `
-function Adminpage () {
+function PrivatePage () {
   return (
     <BackgroundDiv>
         <NavbarDiv> <LogoH1Future>Future</LogoH1Future><LogoH1X>X</LogoH1X> </NavbarDiv>
@@ -82,4 +82,4 @@ function Adminpage () {
   );
 }
 
-export default Adminpage;
+export default PrivatePage;
