@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import { useHistory } from 'react-router'
+import {useValidaSessao} from '../hooks/useValidaSessao'
 
 const BackgroundDiv = styled.div`
     display: flex;
@@ -78,30 +79,23 @@ const TripTitle = styled.h1`
 
 function AddTripPage () {
 
-    const history = useHistory()
-    const goToHomePage=()=>{
-        history.replace("/")
-    }
+    /*Custom hook para validação da sessão*/
+    useValidaSessao()
+    /*Custom hook para validação da sessão*/
 
+    /*Toggle entre páginas*/
+    const history = useHistory()
+    const goToPrivatedPage=()=>{
+        history.replace("/Administrador")
+    }
+     /*Toggle entre páginas*/
   return (
    <BackgroundDiv>
-       <NavbarDiv> <LogoH1Future onClick={goToHomePage}>Future</LogoH1Future><LogoH1X>X</LogoH1X> </NavbarDiv>
+       <NavbarDiv> <LogoH1Future onClick={goToPrivatedPage}>Future</LogoH1Future><LogoH1X>X</LogoH1X> </NavbarDiv>
     <CircleDivContainer>
         <CircleDiv>
                 <TripTitle>Gerenciar Inscrições</TripTitle>
-                <FormContainer>
-                        <ItensDoFormulario label="Nome" variant="outlined" />
-                        <ItensDoFormulario label="Preço" variant="outlined" />
-                        <ItensDoFormulario label="Guia" variant="outlined" />
-                        <ItensDoFormulario label="Destino" variant="outlined" />
-                        <ItensDoFormulario
-                        id="outlined-multiline-static"
-                        multiline
-                        rows={8}
-                        defaultValue="Descrição"
-                        variant="outlined"
-                        />
-                </FormContainer>
+                <div>Ainda estou em desenvolvimento, mas em breve estarei 100%</div>
         </CircleDiv>
     </CircleDivContainer>
    </BackgroundDiv>

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import { useHistory } from 'react-router'
+import {useValidaSessao} from '../hooks/useValidaSessao'
+
 
 const BackgroundDiv = styled.div`
     display: flex;
@@ -78,17 +80,26 @@ const TripTitle = styled.h1`
 
 function AddTripPage () {
 
-    const history = useHistory()
-    const goToHomePage=()=>{
-        history.replace("/")
-    }
+    /*Custom hook para validação da sessão*/
+    useValidaSessao()
+    /*Custom hook para validação da sessão*/
 
+    /*Toggle entre páginas*/
+    const history = useHistory()
+    const goToPrivatedPage=()=>{
+        history.replace("/Administrador")
+    }
+     /*Toggle entre páginas*/
+
+    /*Alerta de criação de página*/
     const onClickTripAdded=()=>{
         alert('Viagem criada com sucesso!')
     }
+    /*Alerta de criação de página*/
+
   return (
    <BackgroundDiv>
-       <NavbarDiv> <LogoH1Future onClick={goToHomePage}>Future</LogoH1Future><LogoH1X>X</LogoH1X> </NavbarDiv>
+       <NavbarDiv> <LogoH1Future onClick={goToPrivatedPage}>Future</LogoH1Future><LogoH1X>X</LogoH1X> </NavbarDiv>
     <CircleDivContainer>
         <CircleDiv>
                 <TripTitle>Criar nova viagem</TripTitle>

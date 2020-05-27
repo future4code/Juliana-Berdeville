@@ -8,6 +8,7 @@ import PublicTripsPage from './components/PublicTripsPage'
 import ApplicationPage from './components/ApplicationPage'
 import AddTripPage from './components/AddTripPage'
 import ManageApplicationPage from './components/ManageApplicationPage'
+import ListTripPage from './components/ListTripPage'
 
 function App () 
 {
@@ -22,6 +23,7 @@ function App ()
                 <Route exact path="/Viagens/Inscricao"> <ApplicationPage/> </Route>
                 <Route exact path="/Administrador/Adicionar-viagem"> <AddTripPage/> </Route>
                 <Route exact path="/Administrador/Gerenciar-inscricoes"> <ManageApplicationPage/> </Route>
+                <Route exact path="/Administrador/Listar-viagens"> <ListTripPage /> </Route>
         </Switch>
     </BrowserRouter>
   );

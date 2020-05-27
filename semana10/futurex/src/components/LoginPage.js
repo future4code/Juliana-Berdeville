@@ -95,52 +95,30 @@ function LoginPage () {
   /*Manipulação de rotas*/
   const history = useHistory()
   const goToHomePage = () => { history.push("/") }
-  const goAdminPage = () => { history.push("/Administrador") }
 /*Manipulação de rotas*/
 
 /*Integração com a API - Login*/
-const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/juliana-berdeville"
-const [email, setEmail] = useState(' ')
-const [password, setPassword] = useState(' ')
-// const loginFunc = async () => {
-//   const body = {
-//                   email: email,
-//                   pass: pass
-//                }
-//     console.log("OLHA AQUIII" + email +pass)
-//                try {
-//             const response = await axios.post(`${baseUrl}/login`, body,{
-//               headers:{
-//                         'Content-Type':'application/json'
-//                       }
-//             })
-//             localStorage.setItem('token', response.data.token)
-//             history.push("/Administrador")
-//         }
-//           catch (e) {
-//                     console.log('Oops! Login operation failed.' + e)
-//                 }
-// }
-// const Logout = () => { localStorage.clear() }
-const login = async() => {
+const [email, setEmail] = useState('')
+const [senha, setSenha] = useState('')
+
+const login = async () => {
   const body = {
       email: email, 
-      password: password
+      password: senha
   }
-  console.log(email)
+  console.log("email digitado: " +email)
+  console.log("senha digitado: " +senha)
   try{
-      const response = await axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/juliana-berdeville/login', body, {
-          headers:{ 
-              'Content-Type': 'application/json'
-          }
-      })
+      const response = await axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/juliana-julian/login', body)
 
       localStorage.setItem('token', response.data.token)
       history.push("/Administrador")
   } catch(e) {
-      alert('login ou senha incorreto')
+      alert('Credenciais incorretas')
   }
 }
+
+
   return (
     <BackgroundDiv>
       <LogoDiv>
@@ -156,7 +134,7 @@ const login = async() => {
       </DivDepoimento>
         <InputDiv>
           <LoginInput label="email" margin="normal" variant="outlined" value={email} onChange={e=>setEmail(e.target.value)}/>
-          <LoginInput label="senha" margin="normal" variant="outlined" value={password} onChange={e=>setPassword(e.target.value)}/>
+          <LoginInput label="senha" margin="normal" variant="outlined" value={senha} onChange={e=>setSenha(e.target.value)}/>
           <CustomButton onClick={login}>LOGIN</CustomButton>
         </InputDiv>
     </BackgroundDiv>
