@@ -100,7 +100,7 @@ const goToManageApllicationPage=()=>{
         <NavbarDiv> <LogoH1Future>Future</LogoH1Future><LogoH1X>X</LogoH1X> </NavbarDiv>
         <AdminParapraph><HelloH1>Olá,</HelloH1><AdminH1>Administrador</AdminH1></AdminParapraph>
         <CircleDiv>
-            <CircleDivParagraph>inscrições realizadas recentemente</CircleDivParagraph>
+            <CircleDivParagraph>Painel de ações:</CircleDivParagraph>
             <StyledButtons onClick={goToListTripsPage}>Listar viagens</StyledButtons>
             <StyledButtons onClick={goToManageApllicationPage}>Gerenciar viagens</StyledButtons>
             <StyledButtons onClick={goToAddTripPage}>Criar viagem</StyledButtons>
