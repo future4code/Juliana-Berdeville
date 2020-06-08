@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
+import Button from '@material-ui/core/Button'
 
 /*styled-components: divs*/
 const Background = styled.div`
@@ -44,13 +45,15 @@ const Saturday = styled.div`
 
 /*styled-components: buttons*/
 const AddButton = styled.button`
- 
+  margin-top: 7px;
+  margin-left: 3px;
 `
 /*styled-components: buttons*/
 
 /*styled-components: input*/
 const AddTaskInput = styled.input`
-  
+  margin-top: 7px;
+  margin-right: 3px;
 `
 /*styled-components: input*/
 
@@ -63,12 +66,47 @@ const WeekdayName = styled.p`
   align-content: flex-start;
 `
 /*styled-components: paragraph*/
+
 function App() {
+
+  /*Definição de estados que guardarão as informaações que mudam*/
+  const [task, setTask] = useState([{id: 1, texto: 'AAA', done:false}, {id: 2, texto: 'BBB', done:false}]) /*As tarefas são um array vazio, no começo*/
+  const [filter, setFilter] = useState(['']) /*Os filtros são strngs vazias no começo também*/
+  const [inputValue, setInputValue] = useState(['']) /*Assim como o valor do Input*, no começo/
+  /*Definição de estados que guardarão as informaações que mudam*/
+
+  /*Função onChange que pega e altera o valor do input*/
+  const onChangeInputValue = (event) => {
+    setInputValue(event.target.value)
+  }
+  /*Função onChange que pega e altera o valor do input*/
+
+  /*Adiciona uma tarefa à lista*/
+  const addTarefa = () => {
+    const novaTarefa = {
+      id: Date.now(),
+      texto: inputValue,
+      done: false
+    }
+
+    const novaListaDeTarefas = [...task, novaTarefa]
+
+    setTask(novaListaDeTarefas)
+
+    alert(novaListaDeTarefas)
+  }
+  /*Adiciona uma tarefa à lista*/
+
+  /*As tarefas são inseridas num array e lá ficam armazenadas. Para que possam ser distribuídas de 
+    acordo com os dias da semana, precisamos vasculhar esse array
+  */
+
+
   return (
     <Background>
         <Header>
-            <AddTaskInput type="text" placeholder="task goes here"></AddTaskInput>
-            <AddButton>Add</AddButton>
+            <AddTaskInput type="text" placeholder="task goes here" onChange={onChangeInputValue}></AddTaskInput>
+            <AddButton onClick={addTarefa}>Add</AddButton>
             <optgroup>
                 <select>
                     <option value="sunday">sunday</option>
