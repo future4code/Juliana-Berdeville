@@ -1,0 +1,20 @@
+{
+  "name": "timestamps-e-moment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node build/index.js --target es6",
+    "exercicio1": "tsc && node build/exercicio1.js --target es6",
+    "exercicio2": "tsc && node build/exercicio2.js --target es6",
+    "exercicio3": "tsc && node build/exercicio3.js --target es6",
+    "exercicio4": "tsc && node build/exercicio4.js --target es6",
+    "exercicio5": "tsc && node build/exercicio5.js --target es6",
+    "rodateste": "tsc && node build/teste.js --target es6"
+  },
+  "author": "Juliana-Berdeville",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.27.0"
+  }
+}
